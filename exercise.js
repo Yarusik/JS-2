@@ -59,11 +59,85 @@ function popElement(arr){
     function maps(x){
 return x.map (z => z*2 );
 }
+  function Car(make, model, color, price,isAvailable) {
+  this.make = make;
+  this.model = model;
+  this.color = color;
+  this.price = price;
+  this.isAvailable = isAvailable;
+  this.beep = beep;
+}
+
+let audiR8 = new Car('Audi', 'R8', 'white', 200000, true);
+audiR8.beep();
 
 // Task 4 https://www.codewars.com/kata/dna-to-rna-conversion/train/javascript?fbclid=IwAR3vDDr5GYt-O5YNs64mw8C3rJ-NYv6GIJ8WBpAed4EkKxiiixGnUjk2KW0
 function DNAtoRNA(dna) {
 return dna.replace (/T/g, 'U') 
 }
 
+/*let products = [];
+products[0] = 'Tesla X';
+products[1] = 'Tesla S';
+products[2] = 'ZAZ Sens';
+products.push('BMW X7');
+products.push('Lada 2109');
+console.log(products.length);
+products[10] = 'Toyota Corolla';
 
+products.forEach( el => console.log(el) );
+
+let prices = [100000, 200000, 10000, 150000, 2000, 20000];
+prices.forEach( el => console.log(el) );
+
+ for (let i = 0; i < products.length; i++) {
+ console.log(products[i]); prices[10]
+ }*/
+ 
+ /*let teslaX = {};
+teslaX.make = 'Tesla';
+teslaX.model = 'X';
+teslaX.color = 'black';
+teslaX.price = 150000;
+teslaX.isAvailable = true;
+teslaX.beep = function() {
+  console.log('Tesla X beep-beep');
+}
+teslaX.beep();
+
+let mazda6 = {
+  make: 'Mazda',
+  model: '6',
+  color: 'red',
+  price: 18000,
+  isAvailable: true,
+  beep: function() {
+   console.log('Mazda 6 beep-beep');
+  }
+};
+mazda6.beep();
+*/
+
+let teslaX = {};
+teslaX.make = 'Tesla';
+teslaX.model = 'X';
+teslaX.color = 'black';
+teslaX.price = 150000;
+teslaX.isAvailable = true;
+teslaX.beep = beep;
+teslaX.beep();
+
+let mazda6 = {
+  make: 'Mazda',
+  model: '6',
+  color: 'red',
+  price: 18000,
+  isAvailable: true,
+  beep: beep
+};
+mazda6.beep();
+
+function beep() {
+  console.log(this.make + ' ' + this.model + ' beep-beep');
+}
 
